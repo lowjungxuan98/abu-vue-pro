@@ -30,6 +30,18 @@ its architecture better.
         - [Install Dependencies](#install-dependencies)
         - [Run the Development Server](#run-the-development-server)
 2. [Chapter 2: Project Architecture Overview](#chapter-2-project-architecture-overview)
+3. [Chapter 3: Create New Feature](#chapter-3-create-new-feature)
+    1. [Create Table in DB](#1-create-table-in-db)
+    2. [Code Generation](#2-code-generation)
+    3. [Running the Back-end](#3-running-the-back-end)
+    4. [Running the Front-end](#4-running-the-front-end)
+4. [Chapter 4: Create New Module](#chapter-4-create-new-module)
+    1. [Create Module](#1-create-yudao-module-demo)
+    2. [Create Submodule(API)](#2-create-yudao-module-demo-api)
+    3. [Create Submodule(Biz)](#3-create-yudao-module-demo-biz)
+    4. [Add yudao-module-demo to yudao-server](#4-add-yudao-module-demo-to-yudao-server)
+    5. [Testing](#5-testing)
+
 ---
 
 # Chapter 1: Project Setup
@@ -375,6 +387,7 @@ If you don't have Maven installed, follow these steps:
 ---
 
 # Chapter 2: Project Architecture Overview
+
 [项目结构](https://doc.iocoder.cn/project-intro/)
 
 [自顶向下，讲解项目的整体结构（上）](https://t.zsxq.com/07FiIaQr3)
@@ -384,6 +397,7 @@ If you don't have Maven installed, follow these steps:
 ---
 
 # Chapter 3: Create New Feature
+
 > Note: The unit test part able to skip because the code generator is not provide the source
 
 [Video](https://t.zsxq.com/2HeGQ)
@@ -413,9 +427,11 @@ CREATE TABLE `system_group`
   COLLATE = utf8mb4_unicode_ci COMMENT ='User Group';
 ```
 
-**Note on Table Name Prefix**: The prefix of the table name should be consistent with the Maven module's name. For example, since the user group is in the `yudao-module-system` module, the table name's prefix is `system_`.
+**Note on Table Name Prefix**: The prefix of the table name should be consistent with the Maven module's name. For
+example, since the user group is in the `yudao-module-system` module, the table name's prefix is `system_`.
 
-*Explanation*: This convention helps in organizing the database tables according to the modules they belong to, making maintenance easier.
+*Explanation*: This convention helps in organizing the database tables according to the modules they belong to, making
+maintenance easier.
 
 ## 2. Code Generation
 
@@ -435,25 +451,286 @@ CREATE TABLE `system_group`
 
 ## 3. Running the Back-end
 
-   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%A4%8D%E5%88%B6%E5%90%8E%E7%AB%AF.png)
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%A4%8D%E5%88%B6%E5%90%8E%E7%AB%AF.png)
 
-   >![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E6%B7%BB%E5%8A%A0%E9%94%99%E8%AF%AF%E7%A0%81.png)
-   >
-   > Please remember to delete the `ErrorCodeConstabts_手动操作.java`
+> ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E6%B7%BB%E5%8A%A0%E9%94%99%E8%AF%AF%E7%A0%81.png)
+>
+> Please remember to delete the `ErrorCodeConstabts_手动操作.java`
 
-   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%88%9D%E5%A7%8B%E5%8C%96%E8%8F%9C%E5%8D%95.png)
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%88%9D%E5%A7%8B%E5%8C%96%E8%8F%9C%E5%8D%95.png)
 
-   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8.png)
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8.png)
 
-### 4. Running the Front-end
+## 4. Running the Front-end
 
-   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%A4%8D%E5%88%B6%E5%89%8D%E7%AB%AF.png)
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%A4%8D%E5%88%B6%E5%89%8D%E7%AB%AF.png)
 
-   >![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2.png)
-   > 
-   > If the feature didn't appear please Navigate to `系统管理` > `菜单管理` > `刷新菜单缓存` to clear the cache
+> ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2.png)
+>
+> If the feature didn't appear please Navigate to `系统管理` > `菜单管理` > `刷新菜单缓存` to clear the cache
+
 ---
 
+Here's the structured and translated guide for setting up the new module, `yudao-module-demo`, in English:
 
-this doc was giving a junior software engineer to faster set up their pc for running the project please help me make it
-more detail, easy to understand and format it more nicely
+---
+
+Here is the translated and formatted guide for creating and integrating the new `yudao-module-demo` module, along with
+its API and business logic submodules:
+
+---
+
+# Chapter 4: Create New Module
+
+## 1. Create `yudao-module-demo`
+
+- **Parent**: yudao
+- **Name**: yudao-module-demo
+- **Location**: `<root dir>/yudao-module-demo`
+- **Steps**:
+    - Delete the `src` folder.
+    - Edit `pom.xml`:
+
+   ```xml
+   <project xmlns="http://maven.apache.org/POM/4.0.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+       
+       <parent>
+           <artifactId>yudao</artifactId>
+           <groupId>cn.iocoder.boot</groupId>
+           <version>${revision}</version> <!-- 1. Modify version to ${revision} -->
+       </parent>
+       
+       <modules>
+           <module>yudao-module-demo-api</module>
+           <module>yudao-module-demo-biz</module>
+       </modules>
+       
+       <modelVersion>4.0.0</modelVersion>
+       <artifactId>yudao-module-demo</artifactId>
+       <packaging>pom</packaging> <!-- 2. Add packaging as pom -->
+       
+       <name>${project.artifactId}</name> <!-- 3. Add name as ${project.artifactId} -->
+       <description> <!-- 4. Add description for the module -->
+           The demo module, mainly implementing features such as XXX, YYY, ZZZ.
+       </description>
+       
+       <properties>
+           <maven.compiler.source>23</maven.compiler.source>
+           <maven.compiler.target>23</maven.compiler.target>
+           <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+       </properties>
+   </project>
+   ```
+
+## 2. Create `yudao-module-demo-api`
+
+- **Parent**: yudao-module-demo
+- **Name**: yudao-module-demo-api
+- **Location**: `<root dir>/yudao-module-demo/yudao-module-demo-api`
+- **Steps**:
+    - Delete the `src` folder.
+    - Edit `pom.xml`:
+
+   ```xml
+   <project xmlns="http://maven.apache.org/POM/4.0.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+       
+       <modelVersion>4.0.0</modelVersion>
+       
+       <parent>
+           <groupId>cn.iocoder.boot</groupId>
+           <artifactId>yudao-module-demo</artifactId>
+           <version>${revision}</version> <!-- 1. Modify version to ${revision} -->
+       </parent>
+       
+       <artifactId>yudao-module-demo-api</artifactId>
+       <packaging>jar</packaging> <!-- 2. Add packaging as jar -->
+       
+       <name>${project.artifactId}</name> <!-- 3. Add name as ${project.artifactId} -->
+       <description> <!-- 4. Add description for the module -->
+           The API for the demo module, exposed for other modules to call.
+       </description>
+       
+       <dependencies> <!-- 5. Add yudao-common dependency -->
+           <dependency>
+               <groupId>cn.iocoder.boot</groupId>
+               <artifactId>yudao-common</artifactId>
+           </dependency>
+       </dependencies>
+       
+       <properties>
+           <maven.compiler.source>23</maven.compiler.source>
+           <maven.compiler.target>23</maven.compiler.target>
+           <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+       </properties>
+   </project>
+   ```
+
+## 3. Create `yudao-module-demo-biz`
+
+- **Parent**: yudao-module-demo
+- **Name**: yudao-module-demo-biz
+- **Location**: `<root dir>/yudao-module-demo/yudao-module-demo-biz`
+- **Steps**:
+    - Delete the `src` folder.
+    - Create the following folders:
+
+       ```
+       project
+       └─ api
+       └─ controller
+       │   └─ admin
+       │   └─ app
+       └─ convert
+       └─ dal
+       └─ enum
+       └─ job
+       └─ mq
+       └─ service
+       ```
+
+    - Create `DemoTestController` in `controller.admin`:
+
+       ```java
+       package cn.iocoder.yudao.module.demo.controller.admin;
+  
+       import cn.iocoder.yudao.framework.common.pojo.CommonResult;
+       import io.swagger.v3.oas.annotations.tags.Tag;
+       import io.swagger.v3.oas.annotations.Operation;
+       import org.springframework.validation.annotation.Validated;
+       import org.springframework.web.bind.annotation.GetMapping;
+       import org.springframework.web.bind.annotation.RequestMapping;
+       import org.springframework.web.bind.annotation.RestController;
+  
+       import static cn.iocoder.yudao.framework.common.pojo.CommonResult.success;
+  
+       @Tag(name = "Admin - Test")
+       @RestController
+       @RequestMapping("/demo/test")
+       @Validated
+       public class DemoTestController {
+  
+           @GetMapping("/get")
+           @Operation(summary = "Retrieve test information")
+           public CommonResult<String> get() {
+               return success("true");
+           }
+       }
+       ```
+
+    - Create `AppDemoTestController` in `controller.app`:
+
+       ```java
+       package cn.iocoder.yudao.module.demo.controller.app;
+  
+       import cn.iocoder.yudao.framework.common.pojo.CommonResult;
+       import io.swagger.v3.oas.annotations.tags.Tag;
+       import io.swagger.v3.oas.annotations.Operation;
+       import org.springframework.validation.annotation.Validated;
+       import org.springframework.web.bind.annotation.GetMapping;
+       import org.springframework.web.bind.annotation.RequestMapping;
+       import org.springframework.web.bind.annotation.RestController;
+  
+       import static cn.iocoder.yudao.framework.common.pojo.CommonResult.success;
+  
+       @Tag(name = "User App - Test")
+       @RestController
+       @RequestMapping("/demo/test")
+       @Validated
+       public class AppDemoTestController {
+  
+           @GetMapping("/get")
+           @Operation(summary = "Retrieve test information")
+           public CommonResult<String> get() {
+               return success("true");
+           }
+       }
+       ```
+
+    - Edit `pom.xml`:
+
+       ```xml
+       <project xmlns="http://maven.apache.org/POM/4.0.0"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+           
+           <modelVersion>4.0.0</modelVersion>
+           
+           <parent>
+               <groupId>cn.iocoder.boot</groupId>
+               <artifactId>yudao-module-demo</artifactId>
+               <version>${revision}</version> <!-- 1. Modify version to ${revision} -->
+           </parent>
+           
+           <packaging>jar</packaging> <!-- 2. Add packaging as jar -->
+           
+           <artifactId>yudao-module-demo-biz</artifactId>
+           
+           <name>${project.artifactId}</name> <!-- 3. Add name as ${project.artifactId} -->
+           <description> <!-- 4. Add description for the module -->
+               The demo module, implementing features such as XXX, YYY, ZZZ.
+           </description>
+           
+           <dependencies> <!-- 5. Add dependencies for common business and technical components -->
+               <dependency>
+                   <groupId>cn.iocoder.boot</groupId>
+                   <artifactId>yudao-module-demo-api</artifactId>
+                   <version>${revision}</version>
+               </dependency>
+               
+               <!-- Web-related dependencies -->
+               <dependency>
+                   <groupId>cn.iocoder.boot</groupId>
+                   <artifactId>yudao-spring-boot-starter-web</artifactId>
+               </dependency>
+               <dependency>
+                   <groupId>cn.iocoder.boot</groupId>
+                   <artifactId>yudao-spring-boot-starter-security</artifactId>
+               </dependency>
+               
+               <!-- Database-related dependencies -->
+               <dependency>
+                   <groupId>cn.iocoder.boot</groupId>
+                   <artifactId>yudao-spring-boot-starter-mybatis</artifactId>
+               </dependency>
+               
+               <!-- Testing dependencies -->
+               <dependency>
+                   <groupId>cn.iocoder.boot</groupId>
+                   <artifactId>yudao-spring-boot-starter-test</artifactId>
+               </dependency>
+           </dependencies>
+           
+           <properties>
+               <maven.compiler.source>23</maven.compiler.source>
+               <maven.compiler.target>23</maven.compiler.target>
+               <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+           </properties>
+       </project>
+       ```
+
+## 4. Add `yudao-module-demo` to `yudao-server`
+
+- Edit `.../yudao-server/pom.xml`:
+
+   ```xml
+    <dependency>
+       <groupId>cn.iocoder.boot</groupId>
+       <artifactId>yudao-module-demo-biz</artifactId>
+       <version>${revision}</version>
+   </dependency>
+   ```
+
+## 5. Testing
+
+1. Restart or re-run the spring application
+2. [API Doc](http://127.0.0.1:48080/doc.html)
+3. Admin API
+   ![alt text](https://doc.iocoder.cn/img/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%97/48.png)
+4. APP API
+   ![alt text](https://doc.iocoder.cn/img/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%97/49.png)
+
+---
