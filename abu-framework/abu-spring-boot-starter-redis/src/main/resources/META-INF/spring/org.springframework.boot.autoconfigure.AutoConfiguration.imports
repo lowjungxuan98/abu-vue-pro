@@ -1,0 +1,2 @@
+my.abu.pp.framework.redis.config.AbuRedisAutoConfiguration
+my.abu.pp.framework.redis.config.AbuCacheAutoConfiguration

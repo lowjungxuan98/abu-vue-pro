@@ -1,0 +1,3 @@
+my.abu.pp.framework.security.config.AbuSecurityAutoConfiguration
+my.abu.pp.framework.security.config.AbuWebSecurityConfigurerAdapter
+my.abu.pp.framework.operatelog.config.AbuOperateLogConfiguration

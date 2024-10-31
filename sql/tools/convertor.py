@@ -16,7 +16,7 @@ from typing import Dict, Generator, Optional, Tuple, Union
 from simple_ddl_parser import DDLParser
 
 PREAMBLE = """/*
- Yudao Database Transfer Tool
+ Abu Database Transfer Tool
 
  Source Server Type    : MySQL
 
@@ -820,7 +820,7 @@ def main():
     )
     args = parser.parse_args()
 
-    sql_file = pathlib.Path("../mysql/ruoyi-vue-pro.sql").resolve().as_posix()
+    sql_file = pathlib.Path("../mysql/abu-vue-pro.sql").resolve().as_posix()
     convertor = None
     if args.type == "postgres":
         convertor = PostgreSQLConvertor(sql_file)

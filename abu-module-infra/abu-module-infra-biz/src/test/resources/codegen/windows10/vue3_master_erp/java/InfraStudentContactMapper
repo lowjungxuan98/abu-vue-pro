@@ -1,0 +1,30 @@
+package my.abu.pp.module.infra.dal.mysql.demo;
+
+import java.util.*;
+
+import my.abu.pp.framework.common.pojo.PageResult;
+import my.abu.pp.framework.common.pojo.PageParam;
+import my.abu.pp.framework.mybatis.core.query.LambdaQueryWrapperX;
+import my.abu.pp.framework.mybatis.core.mapper.BaseMapperX;
+import my.abu.pp.module.infra.dal.dataobject.demo.InfraStudentContactDO;
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * 学生联系人 Mapper
+ *
+ * @author 阿布源码
+ */
+@Mapper
+public interface InfraStudentContactMapper extends BaseMapperX<InfraStudentContactDO> {
+
+    default PageResult<InfraStudentContactDO> selectPage(PageParam reqVO, Long studentId) {
+        return selectPage(reqVO, new LambdaQueryWrapperX<InfraStudentContactDO>()
+            .eq(InfraStudentContactDO::getStudentId, studentId)
+            .orderByDesc(InfraStudentContactDO::getId));
+    }
+
+    default int deleteByStudentId(Long studentId) {
+        return delete(InfraStudentContactDO::getStudentId, studentId);
+    }
+
+}

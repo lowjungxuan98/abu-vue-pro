@@ -1,0 +1,6 @@
+my.abu.pp.framework.apilog.config.AbuApiLogAutoConfiguration
+my.abu.pp.framework.jackson.config.AbuJacksonAutoConfiguration
+my.abu.pp.framework.swagger.config.AbuSwaggerAutoConfiguration
+my.abu.pp.framework.web.config.AbuWebAutoConfiguration
+my.abu.pp.framework.xss.config.AbuXssAutoConfiguration
+my.abu.pp.framework.banner.config.AbuBannerAutoConfiguration

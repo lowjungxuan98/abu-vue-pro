@@ -3,34 +3,34 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>cn.iocoder.boot</groupId>
-    <artifactId>yudao</artifactId>
+    <groupId>my.abu.gg</groupId>
+    <artifactId>abu</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
     <modules>
-        <module>yudao-dependencies</module>
-        <module>yudao-framework</module>
+        <module>abu-dependencies</module>
+        <module>abu-framework</module>
         <!-- Server 主项目 -->
-        <module>yudao-server</module>
+        <module>abu-server</module>
         <!-- 各种 module 拓展 -->
-        <module>yudao-module-system</module>
-        <module>yudao-module-infra</module>
-        <module>yudao-module-demo</module>
-        <!--        <module>yudao-module-member</module>-->
-<!--        <module>yudao-module-bpm</module>-->
-<!--        <module>yudao-module-report</module>-->
-<!--        <module>yudao-module-mp</module>-->
-<!--        <module>yudao-module-pay</module>-->
-<!--        <module>yudao-module-mall</module>-->
-<!--        <module>yudao-module-crm</module>-->
-<!--        <module>yudao-module-erp</module>-->
-<!--        <module>yudao-module-ai</module>-->
-<!--        <module>yudao-module-iot</module>-->
+        <module>abu-module-system</module>
+        <module>abu-module-infra</module>
+        <module>abu-module-demo</module>
+        <!--        <module>abu-module-member</module>-->
+<!--        <module>abu-module-bpm</module>-->
+<!--        <module>abu-module-report</module>-->
+<!--        <module>abu-module-mp</module>-->
+<!--        <module>abu-module-pay</module>-->
+<!--        <module>abu-module-mall</module>-->
+<!--        <module>abu-module-crm</module>-->
+<!--        <module>abu-module-erp</module>-->
+<!--        <module>abu-module-ai</module>-->
+<!--        <module>abu-module-iot</module>-->
     </modules>
 
     <name>${project.artifactId}</name>
     <description>芋道项目基础脚手架</description>
-    <url>https://github.com/YunaiV/ruoyi-vue-pro</url>
+    <url>https://github.com/lowjungxuan98/abu-vue-pro</url>
 
     <properties>
         <revision>2.3.0-SNAPSHOT</revision>
@@ -51,8 +51,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>cn.iocoder.boot</groupId>
-                <artifactId>yudao-dependencies</artifactId>
+                <groupId>my.abu.gg</groupId>
+                <artifactId>abu-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>

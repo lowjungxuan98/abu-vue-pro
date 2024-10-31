@@ -1,5 +1,5 @@
 /*
- Yudao Database Transfer Tool
+ Abu Database Transfer Tool
 
  Source Server Type    : MySQL
 
@@ -388,8 +388,8 @@ COMMENT ON TABLE infra_file_config IS '文件配置表';
 -- ----------------------------
 -- @formatter:off
 SET IDENTITY_INSERT infra_file_config ON;
-INSERT INTO infra_file_config (id, name, storage, remark, master, config, creator, create_time, updater, update_time, deleted) VALUES (4, '数据库', 1, '我是数据库', '0', '{"@class":"cn.iocoder.yudao.module.infra.framework.file.core.client.db.DBFileClientConfig","domain":"http://127.0.0.1:48080"}', '1', '2022-03-15 23:56:24', '1', '2024-02-28 22:54:07', '0');
-INSERT INTO infra_file_config (id, name, storage, remark, master, config, creator, create_time, updater, update_time, deleted) VALUES (22, '七牛存储器', 20, '', '1', '{"@class":"cn.iocoder.yudao.module.infra.framework.file.core.client.s3.S3FileClientConfig","endpoint":"s3.cn-south-1.qiniucs.com","domain":"http://test.yudao.iocoder.cn","bucket":"ruoyi-vue-pro","accessKey":"3TvrJ70gl2Gt6IBe7_IZT1F6i_k0iMuRtyEv4EyS","accessSecret":"wd0tbVBYlp0S-ihA8Qg2hPLncoP83wyrIq24OZuY"}', '1', '2024-01-13 22:11:12', '1', '2024-04-03 19:38:34', '0');
+INSERT INTO infra_file_config (id, name, storage, remark, master, config, creator, create_time, updater, update_time, deleted) VALUES (4, '数据库', 1, '我是数据库', '0', '{"@class":"my.abu.pp.module.infra.framework.file.core.client.db.DBFileClientConfig","domain":"http://127.0.0.1:48080"}', '1', '2022-03-15 23:56:24', '1', '2024-02-28 22:54:07', '0');
+INSERT INTO infra_file_config (id, name, storage, remark, master, config, creator, create_time, updater, update_time, deleted) VALUES (22, '七牛存储器', 20, '', '1', '{"@class":"my.abu.pp.module.infra.framework.file.core.client.s3.S3FileClientConfig","endpoint":"s3.cn-south-1.qiniucs.com","domain":"http://test.abu.iocoder.cn","bucket":"abu-vue-pro","accessKey":"3TvrJ70gl2Gt6IBe7_IZT1F6i_k0iMuRtyEv4EyS","accessSecret":"wd0tbVBYlp0S-ihA8Qg2hPLncoP83wyrIq24OZuY"}', '1', '2024-01-13 22:11:12', '1', '2024-04-03 19:38:34', '0');
 COMMIT;
 SET IDENTITY_INSERT infra_file_config OFF;
 -- @formatter:on
@@ -555,7 +555,7 @@ COMMENT ON TABLE system_dept IS '部门表';
 -- ----------------------------
 -- @formatter:off
 SET IDENTITY_INSERT system_dept ON;
-INSERT INTO system_dept (id, name, parent_id, sort, leader_user_id, phone, email, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (100, '芋道源码', 0, 0, 1, '15888888888', 'ry@qq.com', 0, 'admin', '2021-01-05 17:03:47', '1', '2023-11-14 23:30:36', '0', 1);
+INSERT INTO system_dept (id, name, parent_id, sort, leader_user_id, phone, email, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (100, '阿布源码', 0, 0, 1, '15888888888', 'ry@qq.com', 0, 'admin', '2021-01-05 17:03:47', '1', '2023-11-14 23:30:36', '0', 1);
 INSERT INTO system_dept (id, name, parent_id, sort, leader_user_id, phone, email, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (101, '深圳总公司', 100, 1, 104, '15888888888', 'ry@qq.com', 0, 'admin', '2021-01-05 17:03:47', '1', '2023-12-02 09:53:35', '0', 1);
 INSERT INTO system_dept (id, name, parent_id, sort, leader_user_id, phone, email, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (102, '长沙分公司', 100, 2, NULL, '15888888888', 'ry@qq.com', 0, 'admin', '2021-01-05 17:03:47', '', '2021-12-15 05:01:40', '0', 1);
 INSERT INTO system_dept (id, name, parent_id, sort, leader_user_id, phone, email, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (103, '研发部门', 101, 1, 104, '15888888888', 'ry@qq.com', 0, 'admin', '2021-01-05 17:03:47', '1', '2024-03-24 20:56:04', '0', 1);
@@ -2281,7 +2281,7 @@ COMMENT ON TABLE system_notice IS '通知公告表';
 -- @formatter:off
 SET IDENTITY_INSERT system_notice ON;
 INSERT INTO system_notice (id, title, content, type, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (1, '芋道的公众', '<p>新版本内容133</p>', 1, 0, 'admin', '2021-01-05 17:03:48', '1', '2022-05-04 21:00:20', '0', 1);
-INSERT INTO system_notice (id, title, content, type, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, '维护通知：2018-07-01 系统凌晨维护', '<p><img src="http://test.yudao.iocoder.cn/b7cb3cf49b4b3258bf7309a09dd2f4e5.jpg" alt="" data-href="" style=""/>11112222</p>', 2, 1, 'admin', '2021-01-05 17:03:48', '1', '2023-12-02 20:07:26', '0', 1);
+INSERT INTO system_notice (id, title, content, type, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, '维护通知：2018-07-01 系统凌晨维护', '<p><img src="http://test.abu.iocoder.cn/b7cb3cf49b4b3258bf7309a09dd2f4e5.jpg" alt="" data-href="" style=""/>11112222</p>', 2, 1, 'admin', '2021-01-05 17:03:48', '1', '2023-12-02 20:07:26', '0', 1);
 INSERT INTO system_notice (id, title, content, type, status, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (4, '我是测试标题', '<p>哈哈哈哈123</p>', 1, 0, '110', '2022-02-22 01:01:25', '110', '2022-02-22 01:01:46', '0', 121);
 COMMIT;
 SET IDENTITY_INSERT system_notice OFF;
@@ -2513,10 +2513,10 @@ COMMENT ON TABLE system_oauth2_client IS 'OAuth2 客户端表';
 -- ----------------------------
 -- @formatter:off
 SET IDENTITY_INSERT system_oauth2_client ON;
-INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (1, 'default', 'admin123', '芋道源码', 'http://test.yudao.iocoder.cn/a5e2e244368878a366b516805a4aabf1.png', '我是描述', 0, 1800, 2592000, '["https://www.iocoder.cn","https://doc.iocoder.cn"]', '["password","authorization_code","implicit","refresh_token"]', '["user.read","user.write"]', '[]', '["user.read","user.write"]', '[]', '{}', '1', '2022-05-11 21:47:12', '1', '2024-02-22 16:31:52', '0');
-INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (40, 'test', 'test2', 'biubiu', 'http://test.yudao.iocoder.cn/277a899d573723f1fcdfb57340f00379.png', '啦啦啦啦', 0, 1800, 43200, '["https://www.iocoder.cn"]', '["password","authorization_code","implicit"]', '["user_info","projects"]', '["user_info"]', '[]', '[]', '{}', '1', '2022-05-12 00:28:20', '1', '2023-12-02 21:01:01', '0');
-INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (41, 'yudao-sso-demo-by-code', 'test', '基于授权码模式，如何实现 SSO 单点登录？', 'http://test.yudao.iocoder.cn/fe4ed36596adad5120036ef61a6d0153654544d44af8dd4ad3ffe8f759933d6f.png', NULL, 0, 1800, 43200, '["http://127.0.0.1:18080"]', '["authorization_code","refresh_token"]', '["user.read","user.write"]', '[]', '[]', '[]', NULL, '1', '2022-09-29 13:28:31', '1', '2022-09-29 13:28:31', '0');
-INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (42, 'yudao-sso-demo-by-password', 'test', '基于密码模式，如何实现 SSO 单点登录？', 'http://test.yudao.iocoder.cn/604bdc695e13b3b22745be704d1f2aa8ee05c5f26f9fead6d1ca49005afbc857.jpeg', NULL, 0, 1800, 43200, '["http://127.0.0.1:18080"]', '["password","refresh_token"]', '["user.read","user.write"]', '[]', '[]', '[]', NULL, '1', '2022-10-04 17:40:16', '1', '2022-10-04 20:31:21', '0');
+INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (1, 'default', 'admin123', '阿布源码', 'http://test.abu.iocoder.cn/a5e2e244368878a366b516805a4aabf1.png', '我是描述', 0, 1800, 2592000, '["https://www.iocoder.cn","https://doc.iocoder.cn"]', '["password","authorization_code","implicit","refresh_token"]', '["user.read","user.write"]', '[]', '["user.read","user.write"]', '[]', '{}', '1', '2022-05-11 21:47:12', '1', '2024-02-22 16:31:52', '0');
+INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (40, 'test', 'test2', 'biubiu', 'http://test.abu.iocoder.cn/277a899d573723f1fcdfb57340f00379.png', '啦啦啦啦', 0, 1800, 43200, '["https://www.iocoder.cn"]', '["password","authorization_code","implicit"]', '["user_info","projects"]', '["user_info"]', '[]', '[]', '{}', '1', '2022-05-12 00:28:20', '1', '2023-12-02 21:01:01', '0');
+INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (41, 'abu-sso-demo-by-code', 'test', '基于授权码模式，如何实现 SSO 单点登录？', 'http://test.abu.iocoder.cn/fe4ed36596adad5120036ef61a6d0153654544d44af8dd4ad3ffe8f759933d6f.png', NULL, 0, 1800, 43200, '["http://127.0.0.1:18080"]', '["authorization_code","refresh_token"]', '["user.read","user.write"]', '[]', '[]', '[]', NULL, '1', '2022-09-29 13:28:31', '1', '2022-09-29 13:28:31', '0');
+INSERT INTO system_oauth2_client (id, client_id, secret, name, logo, description, status, access_token_validity_seconds, refresh_token_validity_seconds, redirect_uris, authorized_grant_types, scopes, auto_approve_scopes, authorities, resource_ids, additional_information, creator, create_time, updater, update_time, deleted) VALUES (42, 'abu-sso-demo-by-password', 'test', '基于密码模式，如何实现 SSO 单点登录？', 'http://test.abu.iocoder.cn/604bdc695e13b3b22745be704d1f2aa8ee05c5f26f9fead6d1ca49005afbc857.jpeg', NULL, 0, 1800, 43200, '["http://127.0.0.1:18080"]', '["password","refresh_token"]', '["user.read","user.write"]', '[]', '[]', '[]', NULL, '1', '2022-10-04 17:40:16', '1', '2022-10-04 20:31:21', '0');
 COMMIT;
 SET IDENTITY_INSERT system_oauth2_client OFF;
 -- @formatter:on
@@ -3978,7 +3978,7 @@ COMMENT ON TABLE system_tenant IS '租户表';
 -- ----------------------------
 -- @formatter:off
 SET IDENTITY_INSERT system_tenant ON;
-INSERT INTO system_tenant (id, name, contact_user_id, contact_name, contact_mobile, status, website, package_id, expire_time, account_count, creator, create_time, updater, update_time, deleted) VALUES (1, '芋道源码', NULL, '芋艿', '17321315478', 0, 'www.iocoder.cn', 0, '2099-02-19 17:14:16', 9999, '1', '2021-01-05 17:03:47', '1', '2023-11-06 11:41:41', '0');
+INSERT INTO system_tenant (id, name, contact_user_id, contact_name, contact_mobile, status, website, package_id, expire_time, account_count, creator, create_time, updater, update_time, deleted) VALUES (1, '阿布源码', NULL, '芋艿', '17321315478', 0, 'www.iocoder.cn', 0, '2099-02-19 17:14:16', 9999, '1', '2021-01-05 17:03:47', '1', '2023-11-06 11:41:41', '0');
 INSERT INTO system_tenant (id, name, contact_user_id, contact_name, contact_mobile, status, website, package_id, expire_time, account_count, creator, create_time, updater, update_time, deleted) VALUES (121, '小租户', 110, '小王2', '15601691300', 0, 'zsxq.iocoder.cn', 111, '2025-03-11 00:00:00', 20, '1', '2022-02-22 00:56:14', '1', '2024-07-20 22:21:53', '0');
 INSERT INTO system_tenant (id, name, contact_user_id, contact_name, contact_mobile, status, website, package_id, expire_time, account_count, creator, create_time, updater, update_time, deleted) VALUES (122, '测试租户', 113, '芋道', '15601691300', 0, 'test.iocoder.cn', 111, '2022-04-29 00:00:00', 50, '1', '2022-03-07 21:37:58', '1', '2024-07-20 15:51:18', '0');
 COMMIT;
@@ -4170,8 +4170,8 @@ COMMENT ON TABLE system_users IS '用户信息表';
 -- ----------------------------
 -- @formatter:off
 SET IDENTITY_INSERT system_users ON;
-INSERT INTO system_users (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (1, 'admin', '$2a$10$mRMIYLDtRHlf6.9ipiqH1.Z.bh/R9dO9d5iHiGYPigi6r5KOoR2Wm', '芋道源码', '管理员', 103, '[1,2]', 'aoteman@126.com', '18818260277', 2, 'http://test.yudao.iocoder.cn/bf2002b38950c904243be7c825d3f82e29f25a44526583c3fde2ebdff3a87f75.png', 0, '0:0:0:0:0:0:0:1', '2024-08-26 16:54:00', 'admin', '2021-01-05 17:03:47', NULL, '2024-08-26 16:54:00', '0', 1);
-INSERT INTO system_users (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (100, 'yudao', '$2a$10$11U48RhyJ5pSBYWSn12AD./ld671.ycSzJHbyrtpeoMeYiw31eo8a', '芋道', '不要吓我', 104, '[1]', 'yudao@iocoder.cn', '15601691300', 1, '', 0, '127.0.0.1', '2022-07-09 23:03:33', '', '2021-01-07 09:07:17', '1', '2024-08-17 11:06:13', '0', 1);
+INSERT INTO system_users (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (1, 'admin', '$2a$10$mRMIYLDtRHlf6.9ipiqH1.Z.bh/R9dO9d5iHiGYPigi6r5KOoR2Wm', '阿布源码', '管理员', 103, '[1,2]', 'aoteman@126.com', '18818260277', 2, 'http://test.abu.iocoder.cn/bf2002b38950c904243be7c825d3f82e29f25a44526583c3fde2ebdff3a87f75.png', 0, '0:0:0:0:0:0:0:1', '2024-08-26 16:54:00', 'admin', '2021-01-05 17:03:47', NULL, '2024-08-26 16:54:00', '0', 1);
+INSERT INTO system_users (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (100, 'abu', '$2a$10$11U48RhyJ5pSBYWSn12AD./ld671.ycSzJHbyrtpeoMeYiw31eo8a', '芋道', '不要吓我', 104, '[1]', 'abu@iocoder.cn', '15601691300', 1, '', 0, '127.0.0.1', '2022-07-09 23:03:33', '', '2021-01-07 09:07:17', '1', '2024-08-17 11:06:13', '0', 1);
 INSERT INTO system_users (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (103, 'yuanma', '$2a$04$fUBSmjKCPYAUmnMzOb6qE.eZCGPhHi1JmAKclODbfS/O7fHOl2bH6', '源码', NULL, 106, NULL, 'yuanma@iocoder.cn', '15601701300', 0, '', 0, '0:0:0:0:0:0:0:1', '2024-08-11 17:48:12', '', '2021-01-13 23:50:35', NULL, '2024-08-11 17:48:12', '0', 1);
 INSERT INTO system_users (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (104, 'test', '$2a$04$jDFLttgfik0QqJKAbfhMa.2A9xXoZmAIxakdFJUzkX.MgBKT6ddo6', '测试号', NULL, 107, '[1,2]', '111@qq.com', '15601691200', 1, '', 0, '0:0:0:0:0:0:0:1', '2024-08-11 09:38:08', '', '2021-01-21 02:13:53', NULL, '2024-08-11 09:38:08', '0', 1);
 INSERT INTO system_users (id, username, password, nickname, remark, dept_id, post_ids, email, mobile, sex, avatar, status, login_ip, login_date, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (107, 'admin107', '$2a$10$dYOOBKMO93v/.ReCqzyFg.o67Tqk.bbc2bhrpyBGkIw9aypCtr2pm', '芋艿', NULL, NULL, NULL, '', '15601691300', 0, '', 0, '', NULL, '1', '2022-02-20 22:59:33', '1', '2022-02-27 08:26:51', '0', 118);
@@ -4191,9 +4191,9 @@ SET IDENTITY_INSERT system_users OFF;
 -- @formatter:on
 
 -- ----------------------------
--- Table structure for yudao_demo01_contact
+-- Table structure for abu_demo01_contact
 -- ----------------------------
-CREATE TABLE yudao_demo01_contact (
+CREATE TABLE abu_demo01_contact (
     id bigint NOT NULL PRIMARY KEY IDENTITY,
     name varchar(100) DEFAULT '' NULL,
     sex smallint  NOT NULL,
@@ -4208,34 +4208,34 @@ CREATE TABLE yudao_demo01_contact (
     tenant_id bigint DEFAULT 0 NOT NULL
 );
 
-COMMENT ON COLUMN yudao_demo01_contact.id IS '编号';
-COMMENT ON COLUMN yudao_demo01_contact.name IS '名字';
-COMMENT ON COLUMN yudao_demo01_contact.sex IS '性别';
-COMMENT ON COLUMN yudao_demo01_contact.birthday IS '出生年';
-COMMENT ON COLUMN yudao_demo01_contact.description IS '简介';
-COMMENT ON COLUMN yudao_demo01_contact.avatar IS '头像';
-COMMENT ON COLUMN yudao_demo01_contact.creator IS '创建者';
-COMMENT ON COLUMN yudao_demo01_contact.create_time IS '创建时间';
-COMMENT ON COLUMN yudao_demo01_contact.updater IS '更新者';
-COMMENT ON COLUMN yudao_demo01_contact.update_time IS '更新时间';
-COMMENT ON COLUMN yudao_demo01_contact.deleted IS '是否删除';
-COMMENT ON COLUMN yudao_demo01_contact.tenant_id IS '租户编号';
-COMMENT ON TABLE yudao_demo01_contact IS '示例联系人表';
+COMMENT ON COLUMN abu_demo01_contact.id IS '编号';
+COMMENT ON COLUMN abu_demo01_contact.name IS '名字';
+COMMENT ON COLUMN abu_demo01_contact.sex IS '性别';
+COMMENT ON COLUMN abu_demo01_contact.birthday IS '出生年';
+COMMENT ON COLUMN abu_demo01_contact.description IS '简介';
+COMMENT ON COLUMN abu_demo01_contact.avatar IS '头像';
+COMMENT ON COLUMN abu_demo01_contact.creator IS '创建者';
+COMMENT ON COLUMN abu_demo01_contact.create_time IS '创建时间';
+COMMENT ON COLUMN abu_demo01_contact.updater IS '更新者';
+COMMENT ON COLUMN abu_demo01_contact.update_time IS '更新时间';
+COMMENT ON COLUMN abu_demo01_contact.deleted IS '是否删除';
+COMMENT ON COLUMN abu_demo01_contact.tenant_id IS '租户编号';
+COMMENT ON TABLE abu_demo01_contact IS '示例联系人表';
 
 -- ----------------------------
--- Records of yudao_demo01_contact
+-- Records of abu_demo01_contact
 -- ----------------------------
 -- @formatter:off
-SET IDENTITY_INSERT yudao_demo01_contact ON;
-INSERT INTO yudao_demo01_contact (id, name, sex, birthday, description, avatar, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (1, '土豆', 2, '2023-11-07 00:00:00', '<p>天蚕土豆！呀</p>', 'http://127.0.0.1:48080/admin-api/infra/file/4/get/46f8fa1a37db3f3960d8910ff2fe3962ab3b2db87cf2f8ccb4dc8145b8bdf237.jpeg', '1', '2023-11-15 23:34:30', '1', '2023-11-15 23:47:39', '0', 1);
+SET IDENTITY_INSERT abu_demo01_contact ON;
+INSERT INTO abu_demo01_contact (id, name, sex, birthday, description, avatar, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (1, '土豆', 2, '2023-11-07 00:00:00', '<p>天蚕土豆！呀</p>', 'http://127.0.0.1:48080/admin-api/infra/file/4/get/46f8fa1a37db3f3960d8910ff2fe3962ab3b2db87cf2f8ccb4dc8145b8bdf237.jpeg', '1', '2023-11-15 23:34:30', '1', '2023-11-15 23:47:39', '0', 1);
 COMMIT;
-SET IDENTITY_INSERT yudao_demo01_contact OFF;
+SET IDENTITY_INSERT abu_demo01_contact OFF;
 -- @formatter:on
 
 -- ----------------------------
--- Table structure for yudao_demo02_category
+-- Table structure for abu_demo02_category
 -- ----------------------------
-CREATE TABLE yudao_demo02_category (
+CREATE TABLE abu_demo02_category (
     id bigint NOT NULL PRIMARY KEY IDENTITY,
     name varchar(100) DEFAULT '' NULL,
     parent_id bigint  NOT NULL,
@@ -4247,36 +4247,36 @@ CREATE TABLE yudao_demo02_category (
     tenant_id bigint DEFAULT 0 NOT NULL
 );
 
-COMMENT ON COLUMN yudao_demo02_category.id IS '编号';
-COMMENT ON COLUMN yudao_demo02_category.name IS '名字';
-COMMENT ON COLUMN yudao_demo02_category.parent_id IS '父级编号';
-COMMENT ON COLUMN yudao_demo02_category.creator IS '创建者';
-COMMENT ON COLUMN yudao_demo02_category.create_time IS '创建时间';
-COMMENT ON COLUMN yudao_demo02_category.updater IS '更新者';
-COMMENT ON COLUMN yudao_demo02_category.update_time IS '更新时间';
-COMMENT ON COLUMN yudao_demo02_category.deleted IS '是否删除';
-COMMENT ON COLUMN yudao_demo02_category.tenant_id IS '租户编号';
-COMMENT ON TABLE yudao_demo02_category IS '示例分类表';
+COMMENT ON COLUMN abu_demo02_category.id IS '编号';
+COMMENT ON COLUMN abu_demo02_category.name IS '名字';
+COMMENT ON COLUMN abu_demo02_category.parent_id IS '父级编号';
+COMMENT ON COLUMN abu_demo02_category.creator IS '创建者';
+COMMENT ON COLUMN abu_demo02_category.create_time IS '创建时间';
+COMMENT ON COLUMN abu_demo02_category.updater IS '更新者';
+COMMENT ON COLUMN abu_demo02_category.update_time IS '更新时间';
+COMMENT ON COLUMN abu_demo02_category.deleted IS '是否删除';
+COMMENT ON COLUMN abu_demo02_category.tenant_id IS '租户编号';
+COMMENT ON TABLE abu_demo02_category IS '示例分类表';
 
 -- ----------------------------
--- Records of yudao_demo02_category
+-- Records of abu_demo02_category
 -- ----------------------------
 -- @formatter:off
-SET IDENTITY_INSERT yudao_demo02_category ON;
-INSERT INTO yudao_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (1, '土豆', 0, '1', '2023-11-15 23:34:30', '1', '2023-11-16 20:24:23', '0', 1);
-INSERT INTO yudao_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, '番茄', 0, '1', '2023-11-16 20:24:00', '1', '2023-11-16 20:24:15', '0', 1);
-INSERT INTO yudao_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (3, '怪怪', 0, '1', '2023-11-16 20:24:32', '1', '2023-11-16 20:24:32', '0', 1);
-INSERT INTO yudao_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (4, '小番茄', 2, '1', '2023-11-16 20:24:39', '1', '2023-11-16 20:24:39', '0', 1);
-INSERT INTO yudao_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (5, '大番茄', 2, '1', '2023-11-16 20:24:46', '1', '2023-11-16 20:24:46', '0', 1);
-INSERT INTO yudao_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (6, '11', 3, '1', '2023-11-24 19:29:34', '1', '2023-11-24 19:29:34', '0', 1);
+SET IDENTITY_INSERT abu_demo02_category ON;
+INSERT INTO abu_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (1, '土豆', 0, '1', '2023-11-15 23:34:30', '1', '2023-11-16 20:24:23', '0', 1);
+INSERT INTO abu_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, '番茄', 0, '1', '2023-11-16 20:24:00', '1', '2023-11-16 20:24:15', '0', 1);
+INSERT INTO abu_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (3, '怪怪', 0, '1', '2023-11-16 20:24:32', '1', '2023-11-16 20:24:32', '0', 1);
+INSERT INTO abu_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (4, '小番茄', 2, '1', '2023-11-16 20:24:39', '1', '2023-11-16 20:24:39', '0', 1);
+INSERT INTO abu_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (5, '大番茄', 2, '1', '2023-11-16 20:24:46', '1', '2023-11-16 20:24:46', '0', 1);
+INSERT INTO abu_demo02_category (id, name, parent_id, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (6, '11', 3, '1', '2023-11-24 19:29:34', '1', '2023-11-24 19:29:34', '0', 1);
 COMMIT;
-SET IDENTITY_INSERT yudao_demo02_category OFF;
+SET IDENTITY_INSERT abu_demo02_category OFF;
 -- @formatter:on
 
 -- ----------------------------
--- Table structure for yudao_demo03_course
+-- Table structure for abu_demo03_course
 -- ----------------------------
-CREATE TABLE yudao_demo03_course (
+CREATE TABLE abu_demo03_course (
     id bigint NOT NULL PRIMARY KEY IDENTITY,
     student_id bigint  NOT NULL,
     name varchar(100) DEFAULT '' NULL,
@@ -4289,41 +4289,41 @@ CREATE TABLE yudao_demo03_course (
     tenant_id bigint DEFAULT 0 NOT NULL
 );
 
-COMMENT ON COLUMN yudao_demo03_course.id IS '编号';
-COMMENT ON COLUMN yudao_demo03_course.student_id IS '学生编号';
-COMMENT ON COLUMN yudao_demo03_course.name IS '名字';
-COMMENT ON COLUMN yudao_demo03_course.score IS '分数';
-COMMENT ON COLUMN yudao_demo03_course.creator IS '创建者';
-COMMENT ON COLUMN yudao_demo03_course.create_time IS '创建时间';
-COMMENT ON COLUMN yudao_demo03_course.updater IS '更新者';
-COMMENT ON COLUMN yudao_demo03_course.update_time IS '更新时间';
-COMMENT ON COLUMN yudao_demo03_course.deleted IS '是否删除';
-COMMENT ON COLUMN yudao_demo03_course.tenant_id IS '租户编号';
-COMMENT ON TABLE yudao_demo03_course IS '学生课程表';
+COMMENT ON COLUMN abu_demo03_course.id IS '编号';
+COMMENT ON COLUMN abu_demo03_course.student_id IS '学生编号';
+COMMENT ON COLUMN abu_demo03_course.name IS '名字';
+COMMENT ON COLUMN abu_demo03_course.score IS '分数';
+COMMENT ON COLUMN abu_demo03_course.creator IS '创建者';
+COMMENT ON COLUMN abu_demo03_course.create_time IS '创建时间';
+COMMENT ON COLUMN abu_demo03_course.updater IS '更新者';
+COMMENT ON COLUMN abu_demo03_course.update_time IS '更新时间';
+COMMENT ON COLUMN abu_demo03_course.deleted IS '是否删除';
+COMMENT ON COLUMN abu_demo03_course.tenant_id IS '租户编号';
+COMMENT ON TABLE abu_demo03_course IS '学生课程表';
 
 -- ----------------------------
--- Records of yudao_demo03_course
+-- Records of abu_demo03_course
 -- ----------------------------
 -- @formatter:off
-SET IDENTITY_INSERT yudao_demo03_course ON;
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, 2, '语文', 66, '1', '2023-11-16 23:21:49', '1', '2023-11-16 23:21:49', '0', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (3, 2, '数学', 22, '1', '2023-11-16 23:21:49', '1', '2023-11-16 23:21:49', '0', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (6, 5, '体育', 23, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:44:40', '1', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (7, 5, '计算机', 11, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:44:40', '1', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (8, 5, '体育', 23, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:47:09', '1', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (9, 5, '计算机', 11, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:47:09', '1', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (10, 5, '体育', 23, '1', '2023-11-16 23:22:46', '1', '2023-11-16 23:47:10', '0', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (11, 5, '计算机', 11, '1', '2023-11-16 23:22:46', '1', '2023-11-16 23:47:10', '0', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (12, 2, '电脑', 33, '1', '2023-11-17 00:20:42', '1', '2023-11-16 16:20:45', '1', 1);
-INSERT INTO yudao_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (13, 9, '滑雪', 12, '1', '2023-11-17 13:13:20', '1', '2023-11-17 13:13:20', '0', 1);
+SET IDENTITY_INSERT abu_demo03_course ON;
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, 2, '语文', 66, '1', '2023-11-16 23:21:49', '1', '2023-11-16 23:21:49', '0', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (3, 2, '数学', 22, '1', '2023-11-16 23:21:49', '1', '2023-11-16 23:21:49', '0', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (6, 5, '体育', 23, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:44:40', '1', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (7, 5, '计算机', 11, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:44:40', '1', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (8, 5, '体育', 23, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:47:09', '1', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (9, 5, '计算机', 11, '1', '2023-11-16 23:22:46', '1', '2023-11-16 15:47:09', '1', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (10, 5, '体育', 23, '1', '2023-11-16 23:22:46', '1', '2023-11-16 23:47:10', '0', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (11, 5, '计算机', 11, '1', '2023-11-16 23:22:46', '1', '2023-11-16 23:47:10', '0', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (12, 2, '电脑', 33, '1', '2023-11-17 00:20:42', '1', '2023-11-16 16:20:45', '1', 1);
+INSERT INTO abu_demo03_course (id, student_id, name, score, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (13, 9, '滑雪', 12, '1', '2023-11-17 13:13:20', '1', '2023-11-17 13:13:20', '0', 1);
 COMMIT;
-SET IDENTITY_INSERT yudao_demo03_course OFF;
+SET IDENTITY_INSERT abu_demo03_course OFF;
 -- @formatter:on
 
 -- ----------------------------
--- Table structure for yudao_demo03_grade
+-- Table structure for abu_demo03_grade
 -- ----------------------------
-CREATE TABLE yudao_demo03_grade (
+CREATE TABLE abu_demo03_grade (
     id bigint NOT NULL PRIMARY KEY IDENTITY,
     student_id bigint  NOT NULL,
     name varchar(100) DEFAULT '' NULL,
@@ -4336,34 +4336,34 @@ CREATE TABLE yudao_demo03_grade (
     tenant_id bigint DEFAULT 0 NOT NULL
 );
 
-COMMENT ON COLUMN yudao_demo03_grade.id IS '编号';
-COMMENT ON COLUMN yudao_demo03_grade.student_id IS '学生编号';
-COMMENT ON COLUMN yudao_demo03_grade.name IS '名字';
-COMMENT ON COLUMN yudao_demo03_grade.teacher IS '班主任';
-COMMENT ON COLUMN yudao_demo03_grade.creator IS '创建者';
-COMMENT ON COLUMN yudao_demo03_grade.create_time IS '创建时间';
-COMMENT ON COLUMN yudao_demo03_grade.updater IS '更新者';
-COMMENT ON COLUMN yudao_demo03_grade.update_time IS '更新时间';
-COMMENT ON COLUMN yudao_demo03_grade.deleted IS '是否删除';
-COMMENT ON COLUMN yudao_demo03_grade.tenant_id IS '租户编号';
-COMMENT ON TABLE yudao_demo03_grade IS '学生班级表';
+COMMENT ON COLUMN abu_demo03_grade.id IS '编号';
+COMMENT ON COLUMN abu_demo03_grade.student_id IS '学生编号';
+COMMENT ON COLUMN abu_demo03_grade.name IS '名字';
+COMMENT ON COLUMN abu_demo03_grade.teacher IS '班主任';
+COMMENT ON COLUMN abu_demo03_grade.creator IS '创建者';
+COMMENT ON COLUMN abu_demo03_grade.create_time IS '创建时间';
+COMMENT ON COLUMN abu_demo03_grade.updater IS '更新者';
+COMMENT ON COLUMN abu_demo03_grade.update_time IS '更新时间';
+COMMENT ON COLUMN abu_demo03_grade.deleted IS '是否删除';
+COMMENT ON COLUMN abu_demo03_grade.tenant_id IS '租户编号';
+COMMENT ON TABLE abu_demo03_grade IS '学生班级表';
 
 -- ----------------------------
--- Records of yudao_demo03_grade
+-- Records of abu_demo03_grade
 -- ----------------------------
 -- @formatter:off
-SET IDENTITY_INSERT yudao_demo03_grade ON;
-INSERT INTO yudao_demo03_grade (id, student_id, name, teacher, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (7, 2, '三年 2 班', '周杰伦', '1', '2023-11-16 23:21:49', '1', '2023-11-16 23:21:49', '0', 1);
-INSERT INTO yudao_demo03_grade (id, student_id, name, teacher, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (8, 5, '华为', '遥遥领先', '1', '2023-11-16 23:22:46', '1', '2023-11-16 23:47:10', '0', 1);
-INSERT INTO yudao_demo03_grade (id, student_id, name, teacher, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (9, 9, '小图', '小娃111', '1', '2023-11-17 13:10:23', '1', '2023-11-17 13:10:23', '0', 1);
+SET IDENTITY_INSERT abu_demo03_grade ON;
+INSERT INTO abu_demo03_grade (id, student_id, name, teacher, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (7, 2, '三年 2 班', '周杰伦', '1', '2023-11-16 23:21:49', '1', '2023-11-16 23:21:49', '0', 1);
+INSERT INTO abu_demo03_grade (id, student_id, name, teacher, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (8, 5, '华为', '遥遥领先', '1', '2023-11-16 23:22:46', '1', '2023-11-16 23:47:10', '0', 1);
+INSERT INTO abu_demo03_grade (id, student_id, name, teacher, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (9, 9, '小图', '小娃111', '1', '2023-11-17 13:10:23', '1', '2023-11-17 13:10:23', '0', 1);
 COMMIT;
-SET IDENTITY_INSERT yudao_demo03_grade OFF;
+SET IDENTITY_INSERT abu_demo03_grade OFF;
 -- @formatter:on
 
 -- ----------------------------
--- Table structure for yudao_demo03_student
+-- Table structure for abu_demo03_student
 -- ----------------------------
-CREATE TABLE yudao_demo03_student (
+CREATE TABLE abu_demo03_student (
     id bigint NOT NULL PRIMARY KEY IDENTITY,
     name varchar(100) DEFAULT '' NULL,
     sex smallint  NOT NULL,
@@ -4377,28 +4377,28 @@ CREATE TABLE yudao_demo03_student (
     tenant_id bigint DEFAULT 0 NOT NULL
 );
 
-COMMENT ON COLUMN yudao_demo03_student.id IS '编号';
-COMMENT ON COLUMN yudao_demo03_student.name IS '名字';
-COMMENT ON COLUMN yudao_demo03_student.sex IS '性别';
-COMMENT ON COLUMN yudao_demo03_student.birthday IS '出生日期';
-COMMENT ON COLUMN yudao_demo03_student.description IS '简介';
-COMMENT ON COLUMN yudao_demo03_student.creator IS '创建者';
-COMMENT ON COLUMN yudao_demo03_student.create_time IS '创建时间';
-COMMENT ON COLUMN yudao_demo03_student.updater IS '更新者';
-COMMENT ON COLUMN yudao_demo03_student.update_time IS '更新时间';
-COMMENT ON COLUMN yudao_demo03_student.deleted IS '是否删除';
-COMMENT ON COLUMN yudao_demo03_student.tenant_id IS '租户编号';
-COMMENT ON TABLE yudao_demo03_student IS '学生表';
+COMMENT ON COLUMN abu_demo03_student.id IS '编号';
+COMMENT ON COLUMN abu_demo03_student.name IS '名字';
+COMMENT ON COLUMN abu_demo03_student.sex IS '性别';
+COMMENT ON COLUMN abu_demo03_student.birthday IS '出生日期';
+COMMENT ON COLUMN abu_demo03_student.description IS '简介';
+COMMENT ON COLUMN abu_demo03_student.creator IS '创建者';
+COMMENT ON COLUMN abu_demo03_student.create_time IS '创建时间';
+COMMENT ON COLUMN abu_demo03_student.updater IS '更新者';
+COMMENT ON COLUMN abu_demo03_student.update_time IS '更新时间';
+COMMENT ON COLUMN abu_demo03_student.deleted IS '是否删除';
+COMMENT ON COLUMN abu_demo03_student.tenant_id IS '租户编号';
+COMMENT ON TABLE abu_demo03_student IS '学生表';
 
 -- ----------------------------
--- Records of yudao_demo03_student
+-- Records of abu_demo03_student
 -- ----------------------------
 -- @formatter:off
-SET IDENTITY_INSERT yudao_demo03_student ON;
-INSERT INTO yudao_demo03_student (id, name, sex, birthday, description, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, '小白', 1, '2023-11-16 00:00:00', '<p>厉害</p>', '1', '2023-11-16 23:21:49', '1', '2023-11-17 16:49:06', '0', 1);
-INSERT INTO yudao_demo03_student (id, name, sex, birthday, description, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (5, '大黑', 2, '2023-11-13 00:00:00', '<p>你在教我做事?</p>', '1', '2023-11-16 23:22:46', '1', '2023-11-17 16:49:07', '0', 1);
-INSERT INTO yudao_demo03_student (id, name, sex, birthday, description, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (9, '小花', 1, '2023-11-07 00:00:00', '<p>哈哈哈</p>', '1', '2023-11-17 00:04:47', '1', '2023-11-17 16:49:08', '0', 1);
+SET IDENTITY_INSERT abu_demo03_student ON;
+INSERT INTO abu_demo03_student (id, name, sex, birthday, description, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (2, '小白', 1, '2023-11-16 00:00:00', '<p>厉害</p>', '1', '2023-11-16 23:21:49', '1', '2023-11-17 16:49:06', '0', 1);
+INSERT INTO abu_demo03_student (id, name, sex, birthday, description, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (5, '大黑', 2, '2023-11-13 00:00:00', '<p>你在教我做事?</p>', '1', '2023-11-16 23:22:46', '1', '2023-11-17 16:49:07', '0', 1);
+INSERT INTO abu_demo03_student (id, name, sex, birthday, description, creator, create_time, updater, update_time, deleted, tenant_id) VALUES (9, '小花', 1, '2023-11-07 00:00:00', '<p>哈哈哈</p>', '1', '2023-11-17 00:04:47', '1', '2023-11-17 16:49:08', '0', 1);
 COMMIT;
-SET IDENTITY_INSERT yudao_demo03_student OFF;
+SET IDENTITY_INSERT abu_demo03_student OFF;
 -- @formatter:on
 

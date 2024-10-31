@@ -1,0 +1,3 @@
+my.abu.pp.framework.mq.redis.config.AbuRedisMQProducerAutoConfiguration
+my.abu.pp.framework.mq.redis.config.AbuRedisMQConsumerAutoConfiguration
+my.abu.pp.framework.mq.rabbitmq.config.AbuRabbitMQAutoConfiguration

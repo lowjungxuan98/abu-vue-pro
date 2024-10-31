@@ -1,0 +1,3 @@
+my.abu.pp.framework.datasource.config.AbuDataSourceAutoConfiguration
+my.abu.pp.framework.mybatis.config.AbuMybatisAutoConfiguration
+my.abu.pp.framework.translate.config.AbuTranslateAutoConfiguration

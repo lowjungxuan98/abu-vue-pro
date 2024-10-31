@@ -1,6 +1,6 @@
-# Setting Up the Ruoyi-Vue-Pro Project
+# Setting Up the abu-vue-pro Project
 
-This comprehensive guide is designed to help junior software engineers set up the **Ruoyi-Vue-Pro** project on their
+This comprehensive guide is designed to help junior software engineers set up the **abu-vue-pro** project on their
 local machines. By following these step-by-step instructions, you'll be able to run the project smoothly and understand
 its architecture better.
 
@@ -36,11 +36,13 @@ its architecture better.
     3. [Running the Back-end](#3-running-the-back-end)
     4. [Running the Front-end](#4-running-the-front-end)
 4. [Chapter 4: Create New Module](#chapter-4-create-new-module)
-    1. [Create Module](#1-create-yudao-module-demo)
-    2. [Create Submodule(API)](#2-create-yudao-module-demo-api)
-    3. [Create Submodule(Biz)](#3-create-yudao-module-demo-biz)
-    4. [Add yudao-module-demo to yudao-server](#4-add-yudao-module-demo-to-yudao-server)
+    1. [Create Module](#1-create-abu-module-demo)
+    2. [Create Submodule(API)](#2-create-abu-module-demo-api)
+    3. [Create Submodule(Biz)](#3-create-abu-module-demo-biz)
+    4. [Add abu-module-demo to abu-server](#4-add-abu-module-demo-to-abu-server)
     5. [Testing](#5-testing)
+5. [Chapter 5: Delete a module](#chapter-5-delete-a-module)
+6. [Chapter 6: Change Package Name](#chapter-6-change-package-name)
 
 ---
 
@@ -73,7 +75,7 @@ Before you begin, make sure your system meets the following requirements:
     - In the **URL** field, enter the backend repository URL:
 
       ```plaintext
-      https://github.com/YunaiV/ruoyi-vue-pro.git
+      https://github.com/lowjungxuan98/abu-vue-pro.git
       ```
 
     - Choose a **Directory** where you want to store the project.
@@ -94,7 +96,7 @@ Java Development Kit (JDK) version.
 2. **Navigate to the Project Directory** (if you're not already there):
 
    ```bash
-   cd path/to/ruoyi-vue-pro
+   cd path/to/abu-vue-pro
    ```
 
 3. **List All Branches** to find the one you need:
@@ -203,7 +205,7 @@ Navicat is a GUI tool for managing databases. If you prefer, you can use **MySQL
     - Right-click on the **Local MySQL** connection and select **Create Database**.
 
 3. **Enter Database Details**:
-    - **Database Name**: `ruoyi-vue-pro`
+    - **Database Name**: `abu-vue-pro`
     - **Character Set**: `utf8mb4`
     - **Collation**: `utf8mb4_general_ci`
 
@@ -213,10 +215,10 @@ Navicat is a GUI tool for managing databases. If you prefer, you can use **MySQL
 ### Import the SQL File
 
 1. **Locate the SQL File**:
-    - The SQL file is located in the backend project directory at `sql/mysql/ruoyi-vue-pro.sql`.
+    - The SQL file is located in the backend project directory at `sql/mysql/abu-vue-pro.sql`.
 
 2. **Import the SQL File**:
-    - Right-click on the `ruoyi-vue-pro` database and select **Execute SQL File**.
+    - Right-click on the `abu-vue-pro` database and select **Execute SQL File**.
     - Click on the **...** button to browse and select the SQL file.
     - Click **Start** to begin the import process.
 
@@ -268,7 +270,7 @@ If you don't have Maven installed, follow these steps:
 1. **Navigate to the Project Root Directory**:
 
    ```bash
-   cd path/to/ruoyi-vue-pro
+   cd path/to/abu-vue-pro
    ```
 
 2. **Clean and Package the Project**:
@@ -290,10 +292,10 @@ If you don't have Maven installed, follow these steps:
 1. **Open IntelliJ IDEA**.
 
 2. **Import the Project** (if not already opened):
-    - Go to **File > Open** and select the `ruoyi-vue-pro` directory.
+    - Go to **File > Open** and select the `abu-vue-pro` directory.
 
 3. **Configure the Application**:
-    - Open the `Application.java` file located in `yudao-admin-server/src/main/java/cn/iocoder/yudao/adminserver`.
+    - Open the `Application.java` file located in `abu-admin-server/src/main/java/my.abu.pp/adminserver`.
     - Right-click on the `Application.java` file and select **Run 'Application.main()'**.
 
 4. **Modify Application Configuration** (if necessary):
@@ -322,13 +324,13 @@ If you don't have Maven installed, follow these steps:
 3. **Clone the Frontend Repository**:
 
    ```bash
-   git clone https://github.com/yudaocode/yudao-ui-admin-vue3.git
+   git clone https://github.com/abucode/abu-ui-admin-vue3.git
    ```
 
 4. **Navigate into the Project Directory**:
 
    ```bash
-   cd yudao-ui-admin-vue3
+   cd abu-ui-admin-vue3
    ```
 
 ### Install Node.js and Package Managers
@@ -428,7 +430,7 @@ CREATE TABLE `system_group`
 ```
 
 **Note on Table Name Prefix**: The prefix of the table name should be consistent with the Maven module's name. For
-example, since the user group is in the `yudao-module-system` module, the table name's prefix is `system_`.
+example, since the user group is in the `abu-module-system` module, the table name's prefix is `system_`.
 
 *Explanation*: This convention helps in organizing the database tables according to the modules they belong to, making
 maintenance easier.
@@ -443,11 +445,11 @@ maintenance easier.
 
 ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-%E7%94%9F%E6%88%90%E4%BF%A1%E6%81%AF.png)
 
-| Front-end Project   | Front-end Template Type             |
-|---------------------|-------------------------------------|
-| yudao-ui-admin-vue2 | Vue2 Element UI Standard Template   |
-| yudao-ui-admin-vue3 | Vue3 Element Plus Standard Template |
-| yudao-ui-admin-vben | Vue3 Vben Template                  |
+| Front-end Project | Front-end Template Type             |
+|-------------------|-------------------------------------|
+| abu-ui-admin-vue2 | Vue2 Element UI Standard Template   |
+| abu-ui-admin-vue3 | Vue3 Element Plus Standard Template |
+| abu-ui-admin-vben | Vue3 Vben Template                  |
 
 ## 3. Running the Back-end
 
@@ -471,22 +473,22 @@ maintenance easier.
 
 ---
 
-Here's the structured and translated guide for setting up the new module, `yudao-module-demo`, in English:
+Here's the structured and translated guide for setting up the new module, `abu-module-demo`, in English:
 
 ---
 
-Here is the translated and formatted guide for creating and integrating the new `yudao-module-demo` module, along with
+Here is the translated and formatted guide for creating and integrating the new `abu-module-demo` module, along with
 its API and business logic submodules:
 
 ---
 
 # Chapter 4: Create New Module
 
-## 1. Create `yudao-module-demo`
+## 1. Create `abu-module-demo`
 
-- **Parent**: yudao
-- **Name**: yudao-module-demo
-- **Location**: `<root dir>/yudao-module-demo`
+- **Parent**: abu
+- **Name**: abu-module-demo
+- **Location**: `<root dir>/abu-module-demo`
 - **Steps**:
     - Delete the `src` folder.
     - Edit `pom.xml`:
@@ -497,18 +499,18 @@ its API and business logic submodules:
             xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
        
        <parent>
-           <artifactId>yudao</artifactId>
-           <groupId>cn.iocoder.boot</groupId>
+           <artifactId>abu</artifactId>
+           <groupId>my.abu.gg</groupId>
            <version>${revision}</version> <!-- 1. Modify version to ${revision} -->
        </parent>
        
        <modules>
-           <module>yudao-module-demo-api</module>
-           <module>yudao-module-demo-biz</module>
+           <module>abu-module-demo-api</module>
+           <module>abu-module-demo-biz</module>
        </modules>
        
        <modelVersion>4.0.0</modelVersion>
-       <artifactId>yudao-module-demo</artifactId>
+       <artifactId>abu-module-demo</artifactId>
        <packaging>pom</packaging> <!-- 2. Add packaging as pom -->
        
        <name>${project.artifactId}</name> <!-- 3. Add name as ${project.artifactId} -->
@@ -524,11 +526,11 @@ its API and business logic submodules:
    </project>
    ```
 
-## 2. Create `yudao-module-demo-api`
+## 2. Create `abu-module-demo-api`
 
-- **Parent**: yudao-module-demo
-- **Name**: yudao-module-demo-api
-- **Location**: `<root dir>/yudao-module-demo/yudao-module-demo-api`
+- **Parent**: abu-module-demo
+- **Name**: abu-module-demo-api
+- **Location**: `<root dir>/abu-module-demo/abu-module-demo-api`
 - **Steps**:
     - Delete the `src` folder.
     - Edit `pom.xml`:
@@ -541,12 +543,12 @@ its API and business logic submodules:
        <modelVersion>4.0.0</modelVersion>
        
        <parent>
-           <groupId>cn.iocoder.boot</groupId>
-           <artifactId>yudao-module-demo</artifactId>
+           <groupId>my.abu.gg</groupId>
+           <artifactId>abu-module-demo</artifactId>
            <version>${revision}</version> <!-- 1. Modify version to ${revision} -->
        </parent>
        
-       <artifactId>yudao-module-demo-api</artifactId>
+       <artifactId>abu-module-demo-api</artifactId>
        <packaging>jar</packaging> <!-- 2. Add packaging as jar -->
        
        <name>${project.artifactId}</name> <!-- 3. Add name as ${project.artifactId} -->
@@ -554,10 +556,10 @@ its API and business logic submodules:
            The API for the demo module, exposed for other modules to call.
        </description>
        
-       <dependencies> <!-- 5. Add yudao-common dependency -->
+       <dependencies> <!-- 5. Add abu-common dependency -->
            <dependency>
-               <groupId>cn.iocoder.boot</groupId>
-               <artifactId>yudao-common</artifactId>
+               <groupId>my.abu.gg</groupId>
+               <artifactId>abu-common</artifactId>
            </dependency>
        </dependencies>
        
@@ -569,11 +571,11 @@ its API and business logic submodules:
    </project>
    ```
 
-## 3. Create `yudao-module-demo-biz`
+## 3. Create `abu-module-demo-biz`
 
-- **Parent**: yudao-module-demo
-- **Name**: yudao-module-demo-biz
-- **Location**: `<root dir>/yudao-module-demo/yudao-module-demo-biz`
+- **Parent**: abu-module-demo
+- **Name**: abu-module-demo-biz
+- **Location**: `<root dir>/abu-module-demo/abu-module-demo-biz`
 - **Steps**:
     - Delete the `src` folder.
     - Create the following folders:
@@ -595,9 +597,9 @@ its API and business logic submodules:
     - Create `DemoTestController` in `controller.admin`:
 
        ```java
-       package cn.iocoder.yudao.module.demo.controller.admin;
+       package my.abu.pp.module.demo.controller.admin;
   
-       import cn.iocoder.yudao.framework.common.pojo.CommonResult;
+       import my.abu.pp.framework.common.pojo.CommonResult;
        import io.swagger.v3.oas.annotations.tags.Tag;
        import io.swagger.v3.oas.annotations.Operation;
        import org.springframework.validation.annotation.Validated;
@@ -605,7 +607,7 @@ its API and business logic submodules:
        import org.springframework.web.bind.annotation.RequestMapping;
        import org.springframework.web.bind.annotation.RestController;
   
-       import static cn.iocoder.yudao.framework.common.pojo.CommonResult.success;
+       import static my.abu.pp.framework.common.pojo.CommonResult.success;
   
        @Tag(name = "Admin - Test")
        @RestController
@@ -624,9 +626,9 @@ its API and business logic submodules:
     - Create `AppDemoTestController` in `controller.app`:
 
        ```java
-       package cn.iocoder.yudao.module.demo.controller.app;
+       package my.abu.pp.module.demo.controller.app;
   
-       import cn.iocoder.yudao.framework.common.pojo.CommonResult;
+       import my.abu.pp.framework.common.pojo.CommonResult;
        import io.swagger.v3.oas.annotations.tags.Tag;
        import io.swagger.v3.oas.annotations.Operation;
        import org.springframework.validation.annotation.Validated;
@@ -634,7 +636,7 @@ its API and business logic submodules:
        import org.springframework.web.bind.annotation.RequestMapping;
        import org.springframework.web.bind.annotation.RestController;
   
-       import static cn.iocoder.yudao.framework.common.pojo.CommonResult.success;
+       import static my.abu.pp.framework.common.pojo.CommonResult.success;
   
        @Tag(name = "User App - Test")
        @RestController
@@ -660,14 +662,14 @@ its API and business logic submodules:
            <modelVersion>4.0.0</modelVersion>
            
            <parent>
-               <groupId>cn.iocoder.boot</groupId>
-               <artifactId>yudao-module-demo</artifactId>
+               <groupId>my.abu.gg</groupId>
+               <artifactId>abu-module-demo</artifactId>
                <version>${revision}</version> <!-- 1. Modify version to ${revision} -->
            </parent>
            
            <packaging>jar</packaging> <!-- 2. Add packaging as jar -->
            
-           <artifactId>yudao-module-demo-biz</artifactId>
+           <artifactId>abu-module-demo-biz</artifactId>
            
            <name>${project.artifactId}</name> <!-- 3. Add name as ${project.artifactId} -->
            <description> <!-- 4. Add description for the module -->
@@ -676,31 +678,31 @@ its API and business logic submodules:
            
            <dependencies> <!-- 5. Add dependencies for common business and technical components -->
                <dependency>
-                   <groupId>cn.iocoder.boot</groupId>
-                   <artifactId>yudao-module-demo-api</artifactId>
+                   <groupId>my.abu.gg</groupId>
+                   <artifactId>abu-module-demo-api</artifactId>
                    <version>${revision}</version>
                </dependency>
                
                <!-- Web-related dependencies -->
                <dependency>
-                   <groupId>cn.iocoder.boot</groupId>
-                   <artifactId>yudao-spring-boot-starter-web</artifactId>
+                   <groupId>my.abu.gg</groupId>
+                   <artifactId>abu-spring-boot-starter-web</artifactId>
                </dependency>
                <dependency>
-                   <groupId>cn.iocoder.boot</groupId>
-                   <artifactId>yudao-spring-boot-starter-security</artifactId>
+                   <groupId>my.abu.gg</groupId>
+                   <artifactId>abu-spring-boot-starter-security</artifactId>
                </dependency>
                
                <!-- Database-related dependencies -->
                <dependency>
-                   <groupId>cn.iocoder.boot</groupId>
-                   <artifactId>yudao-spring-boot-starter-mybatis</artifactId>
+                   <groupId>my.abu.gg</groupId>
+                   <artifactId>abu-spring-boot-starter-mybatis</artifactId>
                </dependency>
                
                <!-- Testing dependencies -->
                <dependency>
-                   <groupId>cn.iocoder.boot</groupId>
-                   <artifactId>yudao-spring-boot-starter-test</artifactId>
+                   <groupId>my.abu.gg</groupId>
+                   <artifactId>abu-spring-boot-starter-test</artifactId>
                </dependency>
            </dependencies>
            
@@ -712,14 +714,14 @@ its API and business logic submodules:
        </project>
        ```
 
-## 4. Add `yudao-module-demo` to `yudao-server`
+## 4. Add `abu-module-demo` to `abu-server`
 
-- Edit `.../yudao-server/pom.xml`:
+- Edit `.../abu-server/pom.xml`:
 
    ```xml
     <dependency>
-       <groupId>cn.iocoder.boot</groupId>
-       <artifactId>yudao-module-demo-biz</artifactId>
+       <groupId>my.abu.gg</groupId>
+       <artifactId>abu-module-demo-biz</artifactId>
        <version>${revision}</version>
    </dependency>
    ```
@@ -734,3 +736,24 @@ its API and business logic submodules:
    ![alt text](https://doc.iocoder.cn/img/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%97/49.png)
 
 ---
+
+# Chapter 5: Delete a Module
+
+---
+
+# Chapter 6: Change Package Name
+
+1. edit [ProjectReactor.java](abu-server/src/test/java/my/abu/pp/ProjectReactor.java)
+    - groupIdNew -> my.abu.gg
+    - artifactIdNew -> abu
+    - packageNameNew -> my.abu.pp
+    - titleNew -> 阿布管理系统
+2. run the [ProjectReactor.java](abu-server/src/test/java/my/abu/pp/ProjectReactor.java), once complete with generate a
+   new folder
+3. replace all `ruoyi-vue-pro` (Optional)
+    - replace `https://github.com/YunaiV/ruoyi-vue-pro` with https://github.com/lowjungxuan98/abu-vue-pro
+    - replace `ruoyi-vue-pro` to `abu-vue-pro`
+    - replace `芋道源码` to `阿布源码`
+    - replace `芋道` to `阿布`
+    - rename the database from `ruoyi-vue-pro` to `abu-vue-pro`
+    - delete the **Redis** in docker and re-install

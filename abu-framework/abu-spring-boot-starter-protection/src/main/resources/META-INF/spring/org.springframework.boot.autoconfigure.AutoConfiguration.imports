@@ -1,0 +1,4 @@
+my.abu.pp.framework.idempotent.config.AbuIdempotentConfiguration
+my.abu.pp.framework.lock4j.config.AbuLock4jConfiguration
+my.abu.pp.framework.ratelimiter.config.AbuRateLimiterConfiguration
+my.abu.pp.framework.signature.config.AbuApiSignatureAutoConfiguration
