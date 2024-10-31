@@ -383,5 +383,77 @@ If you don't have Maven installed, follow these steps:
 
 ---
 
+# Chapter 3: Create New Feature
+> Note: The unit test part able to skip because the code generator is not provide the source
+
+[Video](https://t.zsxq.com/2HeGQ)
+
+[Documentation](https://doc.iocoder.cn/new-feature/)
+
+## 1. Create Table in DB
+
+Design a database table for user groups named `system_group`, with the following create table statement:
+
+```MySQL
+CREATE TABLE `system_group`
+(
+    `id`          bigint                                  NOT NULL AUTO_INCREMENT COMMENT 'ID',
+    `name`        varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Name',
+    `description` varchar(512) COLLATE utf8mb4_unicode_ci                      DEFAULT NULL COMMENT 'Description',
+    `status`      tinyint                                 NOT NULL COMMENT 'Status',
+    `creator`     varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'Creator',
+    `create_time` datetime                                NOT NULL             DEFAULT CURRENT_TIMESTAMP COMMENT 'Creation Time',
+    `updater`     varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'Updater',
+    `update_time` datetime                                NOT NULL             DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Update Time',
+    `deleted`     bit(1)                                  NOT NULL             DEFAULT b'0' COMMENT 'Deleted',
+    `tenant_id`   bigint                                  NOT NULL             DEFAULT '0' COMMENT 'Tenant ID',
+    PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci COMMENT ='User Group';
+```
+
+**Note on Table Name Prefix**: The prefix of the table name should be consistent with the Maven module's name. For example, since the user group is in the `yudao-module-system` module, the table name's prefix is `system_`.
+
+*Explanation*: This convention helps in organizing the database tables according to the modules they belong to, making maintenance easier.
+
+## 2. Code Generation
+
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%AF%BC%E5%85%A5%E8%A1%A8.png)
+
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF.png)
+
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-%E5%AD%97%E6%AE%B5%E4%BF%A1%E6%81%AF.png)
+
+![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-%E7%94%9F%E6%88%90%E4%BF%A1%E6%81%AF.png)
+
+| Front-end Project   | Front-end Template Type             |
+|---------------------|-------------------------------------|
+| yudao-ui-admin-vue2 | Vue2 Element UI Standard Template   |
+| yudao-ui-admin-vue3 | Vue3 Element Plus Standard Template |
+| yudao-ui-admin-vben | Vue3 Vben Template                  |
+
+## 3. Running the Back-end
+
+   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%A4%8D%E5%88%B6%E5%90%8E%E7%AB%AF.png)
+
+   >![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E6%B7%BB%E5%8A%A0%E9%94%99%E8%AF%AF%E7%A0%81.png)
+   >
+   > Please remember to delete the `ErrorCodeConstabts_手动操作.java`
+
+   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%88%9D%E5%A7%8B%E5%8C%96%E8%8F%9C%E5%8D%95.png)
+
+   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8.png)
+
+### 4. Running the Front-end
+
+   ![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%A4%8D%E5%88%B6%E5%89%8D%E7%AB%AF.png)
+
+   >![alt text](https://doc.iocoder.cn/img/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/%E5%8D%95%E8%A1%A8/%E5%89%8D%E7%AB%AF%E7%95%8C%E9%9D%A2.png)
+   > 
+   > If the feature didn't appear please Navigate to `系统管理` > `菜单管理` > `刷新菜单缓存` to clear the cache
+---
+
+
 this doc was giving a junior software engineer to faster set up their pc for running the project please help me make it
 more detail, easy to understand and format it more nicely
