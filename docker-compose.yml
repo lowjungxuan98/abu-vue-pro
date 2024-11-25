@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-demo
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: '123456'    # Root password as specified
+      MYSQL_DATABASE: 'abu-vue-pro'    # Initial database
+    ports:
+      - '3306:3306'                    # Map port 3306 to the host
+    volumes:
+      - mysql_data:/var/lib/mysql      # Persist MySQL data
+      - /Users/lowjungxuan/Desktop/abu-vue-pro/sql/mysql:/docker-entrypoint-initdb.d
+      # Mount SQL files for initialization
+    command: --default-authentication-plugin=mysql_native_password
+    # Ensures compatibility with MySQL clients
+
+  redis:
+    image: redis:6.2
+    container_name: redis-demo
+    restart: always
+    ports:
+      - '6379:6379'                    # Map port 6379 to the host
+    volumes:
+      - redis_data:/data               # Persist Redis data
+
+volumes:
+  mysql_data:
+  redis_data:
